@@ -1,0 +1,9 @@
+# lista_livros.py
+
+def obter_livros():
+    return [
+        {"titulo": "Livro A", "autor": "Autor 1", "categoria": "Ficção", "preco": 30},
+        {"titulo": "Livro B", "autor": "Autor 2", "categoria": "Técnico", "preco": 50},
+        {"titulo": "Livro C", "autor": "Autor 1", "categoria": "Ficção", "preco": 40},
+        {"titulo": "Livro D", "autor": "Autor 3", "categoria": "História", "preco": 60},
+    ]
