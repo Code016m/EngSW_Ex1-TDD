@@ -1,0 +1,32 @@
+# filtro_livros.py
+
+def filtrar_livros(livros, criterios):
+    """
+    Filtra uma lista de livros com base nos critérios fornecidos
+    :param livros: lista de dicionários contendo dados de cada livro
+    :param criterios: dicionário com filtros (autor, categoria, preco_max, preco_min)
+    :return: lista de livros filtrados
+    """
+
+    resultado = []
+
+    for livro in livros:
+
+        # Filtrar por autor
+        if 'autor' in criterios and livro['autor'] != criterios['autor']:
+            continue
+
+        # Filtrar por categoria
+        if 'categoria' in criterios and livro['categoria'] != criterios['categoria']:
+            continue
+        # Filtrar por preço máximo
+        if 'preco_max' in criterios and livro['preco'] > criterios['preco_max']:
+            continue
+
+        # Filtrar por preço mínimo (extra - melhora o projeto)
+        if 'preco_min' in criterios and livro['preco'] < criterios['preco_min']:
+            continue
+
+        resultado.append(livro)
+
+    return resultado
